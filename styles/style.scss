@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+body {
+    margin: 10% 5%;
+    padding: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: 400%;
+    background-image: linear-gradient(to bottom left, #e0eaf3, #86bcc0, #72dbcd);
+    
+    animation: bg-anim 20s infinite alternate;
+
+    @keyframes bg-anim {
+        0% {
+            background-position: left;
+        }
+        100% {
+            background-position: right;
+        }
+    }
+
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+
+    .container {
+        main {
+            p {
+                margin: 0;
+            }
+
+            h2 {
+                margin: 0;
+                margin-bottom: 0.5em;
+
+                color: #fff;
+                font-weight: 700;
+            }
+
+            .join-community {
+                padding: 1.5em;
+
+                display: block;
+
+                background: #fff;
+                border-radius: 10px 10px 0 0;
+        
+                h2 {
+                    color: #4fb2af;
+                }
+
+                h3 {
+                    margin: 0;
+                    margin-bottom: 0.5em;
+
+                    color: #cbde75;
+                }
+
+                .desc {
+                    color: #9ba2aa;
+                }
+            }
+        
+            .monthly-sub {
+                padding: 1.5em;
+                display: block;
+                background: #2bb3b1;
+
+                .price {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+
+                    .dollar-29 {
+                        margin-right: 10px;
+
+                        color: #fff;
+
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                    }
+
+                    .per-month {
+                        color: #e5eff5;
+                    }
+                }
+
+                .full-access {
+                    margin-bottom: 2em;
+                    color: #fff;
+                }
+
+                a {
+                    color: #fff;
+
+                    text-decoration: none;
+                    text-align: center;
+
+                    p {
+                        transition: background-position 1s;
+
+                        padding: 15px;
+
+                        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                            
+                        background-size: 300%;
+                        background-position: left;
+                        background-image: linear-gradient(to right, #bfdf32, #a7cc40, #cec54c);
+                        
+                        border-radius: 10px;
+                        font-weight: 700;
+                    }
+
+                    p:hover {
+                        cursor: pointer;
+                        background-position: right;
+                    }
+                }
+            }
+        
+            .why-us {
+                padding: 1.5em;
+
+                display: block;
+                
+                background: #4abebd;
+                border-radius: 0 0 10px 10px;
+
+                .why-us-paragraph {
+                    p {
+                        color: #e5eff5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 840px) {
+    body {
+        margin-left: 23%;
+        margin-right: 23%;
+
+        .container {
+            main {
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+                color: red;
+
+                animation: slide-in 1s ease-out;
+
+                .join-community {
+                    grid-column: span 2;
+                    padding-bottom: 50px;
+                }
+
+                .monthly-sub {
+                    border-radius: 0 0 0 10px;
+                }
+
+                .why-us {
+                    border-radius: 0 0 10px 0;
+                }
+            }
+        }
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translateY(-1000px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+body {
+  margin: 10% 5%;
+  padding: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: 400%;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#e0eaf3), color-stop(#86bcc0), to(#72dbcd));
+  background-image: linear-gradient(to bottom left, #e0eaf3, #86bcc0, #72dbcd);
+  -webkit-animation: bg-anim 20s infinite alternate;
+          animation: bg-anim 20s infinite alternate;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+@-webkit-keyframes bg-anim {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bg-anim {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+body .container main p {
+  margin: 0;
+}
+
+body .container main h2 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  color: #fff;
+  font-weight: 700;
+}
+
+body .container main .join-community {
+  padding: 1.5em;
+  display: block;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+body .container main .join-community h2 {
+  color: #4fb2af;
+}
+
+body .container main .join-community h3 {
+  margin: 0;
+  margin-bottom: 0.5em;
+  color: #cbde75;
+}
+
+body .container main .join-community .desc {
+  color: #9ba2aa;
+}
+
+body .container main .monthly-sub {
+  padding: 1.5em;
+  display: block;
+  background: #2bb3b1;
+}
+
+body .container main .monthly-sub .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container main .monthly-sub .price .dollar-29 {
+  margin-right: 10px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+body .container main .monthly-sub .price .per-month {
+  color: #e5eff5;
+}
+
+body .container main .monthly-sub .full-access {
+  margin-bottom: 2em;
+  color: #fff;
+}
+
+body .container main .monthly-sub a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+body .container main .monthly-sub a p {
+  -webkit-transition: background-position 1s;
+  transition: background-position 1s;
+  padding: 15px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-size: 300%;
+  background-position: left;
+  background-image: -webkit-gradient(linear, left top, right top, from(#bfdf32), color-stop(#a7cc40), to(#cec54c));
+  background-image: linear-gradient(to right, #bfdf32, #a7cc40, #cec54c);
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+body .container main .monthly-sub a p:hover {
+  cursor: pointer;
+  background-position: right;
+}
+
+body .container main .why-us {
+  padding: 1.5em;
+  display: block;
+  background: #4abebd;
+  border-radius: 0 0 10px 10px;
+}
+
+body .container main .why-us .why-us-paragraph p {
+  color: #e5eff5;
+}
+
+@media (min-width: 840px) {
+  body {
+    margin-left: 23%;
+    margin-right: 23%;
+  }
+  body .container main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
+    color: red;
+    -webkit-animation: slide-in 1s ease-out;
+            animation: slide-in 1s ease-out;
+  }
+  body .container main .join-community {
+    grid-column: span 2;
+    padding-bottom: 50px;
+  }
+  body .container main .monthly-sub {
+    border-radius: 0 0 0 10px;
+  }
+  body .container main .why-us {
+    border-radius: 0 0 10px 0;
+  }
+  @-webkit-keyframes slide-in {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+/*# sourceMappingURL=style.css.map */
